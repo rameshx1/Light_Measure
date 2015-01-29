@@ -20,7 +20,6 @@ import org.apache.http.params.HttpParams;
 import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -77,10 +76,6 @@ public class HttpRequest extends AsyncTask<String, Integer, Double> {
 
     public String sendPost(String url, String data) {
         return sendPost(url, data, null);
-    }
-
-    public String sendJSONPost(String url, JSONObject data) {
-        return sendPost(url, data.toString(), "application/json");
     }
 
     public String sendPost(String url, String data, String contentType) {

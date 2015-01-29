@@ -6,17 +6,14 @@ import android.hardware.SensorManager;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.os.Bundle;
-import android.app.Activity;
-import android.os.StrictMode;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 import java.net.URLEncoder;
 
-import static android.os.SystemClock.elapsedRealtime;
+
 
 
 public class LightActivityMain extends ActionBarActivity implements SensorEventListener  {
@@ -24,11 +21,7 @@ public class LightActivityMain extends ActionBarActivity implements SensorEventL
     private SensorManager mSensorManager; //Sensor Manager object for accelerometer
     private Sensor mLight; //Accelerometer object
     float luxNum = 0;
-    final String myTag = "DocsUpload";
     TextView lux_level;
-    boolean timeReady = false;
-    long timeWait=0;
-    long time=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
